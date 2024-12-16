@@ -24,7 +24,7 @@ jobs:
       - name: install dependencies
         run: pnpm install --frozen-lockfile
       - name: generate nuxt
-        run: npx nuxi generate
+        run: pnpm generate
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
