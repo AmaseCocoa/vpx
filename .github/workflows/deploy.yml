@@ -12,12 +12,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
       - name: setup node
         uses: actions/setup-node@v3
         with:
           node-version: "20.x"
-      - name: install modules
-        run: npm ci
+          cache: 'pnpm'
+      - name: install dependencies
+        run: pnpm install --frozen-lockfile
       - name: generate nuxt
         run: npx nuxi generate
       - name: Deploy via FTP
