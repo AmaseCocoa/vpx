@@ -19,7 +19,9 @@
                             <nuxt-img
                                 :src="`/pictures/${image.file}`" 
                                 :alt="`Image ${index + 1}`" 
-                                class="image" 
+                                loading="lazy"
+                                format="webp"
+                                class="image"
                             />
                         </div>
                     </div>
