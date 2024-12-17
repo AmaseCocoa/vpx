@@ -4,7 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/image'],
   image: {
-    format: ['avif', 'webp']
+    format: ['avif', 'webp'],
+    ipx: {
+        maxAge: 2592000
+    }
   },
   app: {
     head: {
