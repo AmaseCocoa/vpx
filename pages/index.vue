@@ -25,7 +25,7 @@
                     </div>
                 </a>
                 <p class="text-center text-sm">Date: {{ image.date.toLocaleString() }}</p>
-                <p class="text-center text-sm">Size: {{ image.height }}x{{ image.width }}</p>
+                <p class="text-center text-sm">Size: {{ image.width }}x{{ image.height }}</p>
             </div>
         </div>
     </div>
